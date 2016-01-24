@@ -1,0 +1,5 @@
+== How to kill a process by port
+
+In this example the port is 8080
+
+  lsof -Pn | grep ':8080' | awk '{print $2}' | xargs kill -9
