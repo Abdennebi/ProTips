@@ -1,0 +1,9 @@
+CHECKING IF AN APPLICATION IS INSTALLED
+
+`PackageManager pm = context.getPackageManager();
+try {
+   pm.getPackageInfo("com.ubercab", PackageManager.GET_ACTIVITIES);
+   // Launch App.
+} catch (PackageManager.NameNotFoundException e) {
+   // No Uber app! Open Mobile Website.
+}`
