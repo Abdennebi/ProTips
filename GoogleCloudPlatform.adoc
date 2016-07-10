@@ -1,0 +1,9 @@
+== Quotas
+
+=== Check quota
+
+	gcloud compute project-info describe --project myproject 
+	
+To check used quota in a region :
+
+	gcloud compute regions describe example-region
