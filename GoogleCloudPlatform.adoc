@@ -2,8 +2,135 @@
 
 === Check quota
 
-	gcloud compute project-info describe --project myproject 
+	gcloud compute project-info describe --project tokyo-nomad-136308
 	
-To check used quota in a region :
+output :
+
+	commonInstanceMetadata:
+	  fingerprint: gnvBq7MSuz4=
+	  items:
+	  - key: sshKeys
+		value: |
+		  abdennebi:ssh-rsa XXXXYYYYYZZZZZZ= google-ssh {"userName":"abdennebi@gmail.com","expireOn":"2016-07-09T17:31:57+0000"}
+		  abdennebi:ecdsa-sha2-nistp256 AAAAABBBBBBDDDDDDDDDD= google-ssh {"userName":"abdennebi@gmail.com","expireOn":"2016-07-09T17:31:49+0000"}
+	  kind: compute#metadata
+	creationTimestamp: '2016-07-05T02:01:10.631-07:00'
+	defaultServiceAccount: 975364731439-compute@developer.gserviceaccount.com
+	id: '7027944062084106681'
+	kind: compute#project
+	name: tokyo-nomad-136308
+	quotas:
+	- limit: 1000.0
+	  metric: SNAPSHOTS
+	  usage: 0.0
+	- limit: 5.0
+	  metric: NETWORKS
+	  usage: 2.0
+	- limit: 100.0
+	  metric: FIREWALLS
+	  usage: 7.0
+	- limit: 100.0
+	  metric: IMAGES
+	  usage: 1.0
+	- limit: 7.0
+	  metric: STATIC_ADDRESSES
+	  usage: 0.0
+	- limit: 200.0
+	  metric: ROUTES
+	  usage: 7.0
+	- limit: 15.0
+	  metric: FORWARDING_RULES
+	  usage: 0.0
+	- limit: 50.0
+	  metric: TARGET_POOLS
+	  usage: 0.0
+	- limit: 50.0
+	  metric: HEALTH_CHECKS
+	  usage: 0.0
+	- limit: 23.0
+	  metric: IN_USE_ADDRESSES
+	  usage: 0.0
+	- limit: 50.0
+	  metric: TARGET_INSTANCES
+	  usage: 0.0
+	- limit: 10.0
+	  metric: TARGET_HTTP_PROXIES
+	  usage: 0.0
+	- limit: 10.0
+	  metric: URL_MAPS
+	  usage: 0.0
+	- limit: 3.0
+	  metric: BACKEND_SERVICES
+	  usage: 0.0
+	- limit: 100.0
+	  metric: INSTANCE_TEMPLATES
+	  usage: 0.0
+	- limit: 5.0
+	  metric: TARGET_VPN_GATEWAYS
+	  usage: 0.0
+	- limit: 10.0
+	  metric: VPN_TUNNELS
+	  usage: 0.0
+	- limit: 10.0
+	  metric: ROUTERS
+	  usage: 0.0
+	- limit: 10.0
+	  metric: TARGET_HTTPS_PROXIES
+	  usage: 0.0
+	- limit: 10.0
+	  metric: SSL_CERTIFICATES
+	  usage: 0.0
+	- limit: 100.0
+	  metric: SUBNETWORKS
+	  usage: 5.0
+	selfLink: https://www.googleapis.com/compute/v1/projects/tokyo-nomad-136308
+
+	
+=== To check used quota in a region :
 
 	gcloud compute regions describe example-region
+	
+output :
+
+	creationTimestamp: '2016-06-14T17:29:18.761-07:00'
+	description: europe-west1
+	id: '1100'
+	kind: compute#region
+	name: europe-west1
+	quotas:
+	- limit: 24.0
+	  metric: CPUS
+	  usage: 0.0
+	- limit: 10240.0
+	  metric: DISKS_TOTAL_GB
+	  usage: 10.0
+	- limit: 7.0
+	  metric: STATIC_ADDRESSES
+	  usage: 1.0
+	- limit: 23.0
+	  metric: IN_USE_ADDRESSES
+	  usage: 0.0
+	- limit: 2048.0
+	  metric: SSD_TOTAL_GB
+	  usage: 0.0
+	- limit: 10240.0
+	  metric: LOCAL_SSD_TOTAL_GB
+	  usage: 0.0
+	- limit: 100.0
+	  metric: INSTANCE_GROUPS
+	  usage: 0.0
+	- limit: 50.0
+	  metric: INSTANCE_GROUP_MANAGERS
+	  usage: 0.0
+	- limit: 240.0
+	  metric: INSTANCES
+	  usage: 0.0
+	- limit: 50.0
+	  metric: AUTOSCALERS
+	  usage: 0.0
+	selfLink: https://www.googleapis.com/compute/v1/projects/tokyo-nomad-136308/regions/europe-west1
+	status: UP
+	zones:
+	- https://www.googleapis.com/compute/v1/projects/tokyo-nomad-136308/zones/europe-west1-b
+	- https://www.googleapis.com/compute/v1/projects/tokyo-nomad-136308/zones/europe-west1-c
+	- https://www.googleapis.com/compute/v1/projects/tokyo-nomad-136308/zones/europe-west1-d
